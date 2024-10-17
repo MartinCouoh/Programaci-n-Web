@@ -1,0 +1,6 @@
+{
+    "Crear un Media Query":{
+		"prefijo": "mq",
+		"body": "@media (min-width: $1px){\n $2\n}"
+	}
+}
