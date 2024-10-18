@@ -11,30 +11,44 @@ html{
 }
 body{
     font-size: 16px;
+    font-family: 'Krub', sans-serif;
 }
 /*Se aplica desde 0 pixeles*/
 body {
     background-color: white;
+
 }
 /**recpmendado
 480 ppx para movile
 768 para tablets*/
 
-
- 
-
-
 /*El punto hace referencia a clases*/
-.titulo{
-    text-align: center;
+h1{
     font-size: 3.8rem;
 }
-
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
 .titulo span{
     font-size: 2rem;
 }
-
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+    }
+p{
+    font-weight: normal;
+    text-align: left;
+    font-size: 20px;
+}
 .navegacion-principal{
+    padding: 1rem;
     background-color: var(--secundario);
     /*margin es por fuera y padding es por dentro*/
     display: flex; /*flexbox esta diseñao para alinear elembtos en tus diseños*/
@@ -53,6 +67,7 @@ body {
 .navegacion-principal a:hover{ /*para poner el cursor en el hipervinculo*/
     background-color: var(--primario);
     color: var(--oscuro);
+
 }
 .navegacion-principal a{
 color: var(--blanco);
@@ -62,6 +77,10 @@ padding: 1rem;
 
 .contenedor{
 width: 120rem; /*1200 pixeles porque 1 rem= 10px*/
+margin-top: 0;
+margin-bottom: 0;
+margin-left: auto;
+margin-right: auto; 
 margin: 0 auto;
 }
 
@@ -71,5 +90,54 @@ margin: 0 auto;
 .hero{
     background-image: url(../img/hero.jpg); /*es para regresar un nivel de direcctorio ya que la carpeta esta fuera del css/
     background-repeat: no-repeat; /* Sirve para evitar la repetición de la imagen cuando es pequeña*/
-    background-size: cover; /* Sirve para cubrir la imagen con todo el tamaño*/
+    background-size: cover; /* Sirve para cubrir la imagen con todo el tamaño*/ 
+    height: 450px;
+    position: relative;
+}
+.contenido-hero{
+    position: absolute; /*para manipular la posicion. El hijo siempre debe ser absoluto*/
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+    /*alinear texto vertical y horzontalmnete*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero p,
+.contenido-hero h2{
+    color: var(--blanco);
+}
+.Ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Estilos generales del botón */
+.btn-contactar {
+    background-color: #26939f; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 1.5rem 3rem; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    text-decoration: none; /* Quitar subrayado */
+    display: inline-block;
+    font-size: 1.6rem; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+    width: auto; /* Tamaño del botón basado en el contenido */
+    max-width: 100%; /* Evita que se expanda más que su contenedor */
+    width: auto;
+}
+
+/* Estilos responsive para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .btn-contactar {
+        width: 90%; /* El botón ocupará todo el ancho disponible */
+        font-size: 2rem; /* Aumenta el tamaño de la fuente para que se vea más grande */
+        padding: 2rem 4rem; /* Aumenta el espaciado interno para hacer el botón más grande */
+    }
 }
